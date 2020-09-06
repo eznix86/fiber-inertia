@@ -2,27 +2,31 @@
 
 This is a Inertia.js server-side adapter based on inertia-laravel, but for Fiber Framework.
 
-## Installation 
+## Installation
+
+```
+go get -v github.com/theArtechnology/fiber-inertia
+```
 
 #### What do you need ?
 
 - Fiber Middleware
 ```go
-	app := fiber.New()
-    // AssetsPath is the path of your assets
-	app.Use(inertia.New(inertia.Config{
-		AssetsPath: "./public",
-	}))
+app := fiber.New()
+// AssetsPath is the path of your assets
+app.Use(inertia.New(inertia.Config{
+	AssetsPath: "./public",
+}))
 ```
 - Use `Render` method
 
 ```go
-	inertia.Render(c,
-		"App",
-		inertia.Map{
-		"Hello" : "World",
-		},
-	)
+inertia.Render(c,
+	"App",
+	inertia.Map{
+	"Hello" : "World",
+	},
+)
 ```
 #### Install Client Side
 
