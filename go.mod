@@ -1,4 +1,4 @@
-module fiber-inertia
+module github.com/theArtechnology/fiber-inertia
 
 go 1.13
 
